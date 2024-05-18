@@ -4,7 +4,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 
 import 'widgets/chat_bubble.dart';
 
-const apiKey = 'AIzaSyAsM7WtuMOhvwuODMOUrtFB';
+const apiKey = 'AIzaSyBVnJZbFdljbP4ztbH14ZSJktqr0nkIzvM';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({super.key});
@@ -23,7 +23,7 @@ class _ChatPageState extends State<ChatPage> {
   List<ChatBubble> chatBubbles = [
     const ChatBubble(
       direction: Direction.left,
-      message: 'Halo, saya GEMINI AI. Ada yang bisa saya bantu?',
+      message: 'Halo, saya Ontoy AI. Ada yang bisa saya bantu?',
       photoUrl: 'https://i.pravatar.cc/150?img=47',
       type: BubbleType.alone,
     ),
@@ -33,16 +33,8 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: CupertinoButton(
-          child: const Icon(
-            Icons.arrow_back_ios,
-            color: Colors.white,
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: const Text('Gemini Personal Assistant AI',
-            style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.blueGrey,
+        title: const Text('Ontoy AI', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.pink,
       ),
       body: Column(
         children: [
@@ -59,7 +51,7 @@ class _ChatPageState extends State<ChatPage> {
             padding: const EdgeInsets.all(10),
             child: Row(
               children: [
-                 Expanded(
+                Expanded(
                   child: TextField(
                     controller: messageController,
                     decoration: const InputDecoration(
